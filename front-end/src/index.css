@@ -90,15 +90,19 @@ li{
 button{
     padding: 1rem;
     border-radius: 5px;
-    border: 1px black solid;
+    border: 1px rgba(172, 172, 172, 0.705) solid;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: rgba(59, 59, 255, 0.712);
     cursor: pointer;
 }
 
+button:hover{
+    border: 1px rgb(0, 0, 0) solid;
+}
+
 button.primary{
-    background-color: rgba(59, 59, 255, 0.712);
+    background-color: rgba(73, 0, 209, 0.795);
 }
 
 button.block{
