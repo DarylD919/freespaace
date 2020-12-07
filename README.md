@@ -1,6 +1,8 @@
 # freespaace
 E-commerce
 
-React App FreeSpace created
+React App FreeSpace created 
 
-42:53
+Created the card system for the react app
+
+1:01
