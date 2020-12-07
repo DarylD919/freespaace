@@ -89,10 +89,11 @@ a:hover{
     justify-content: center;
 }
 
-/* images */
+/* images  sizes 680*830 */
 
 img{
-    border-radius: 0.2rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 img.medium{
     max-width: 29rem;
@@ -102,10 +103,10 @@ img.medium{
 /* Card */
 
 .card{
-    border: 0.1rem #252525 solid;
-    background-color: #ffffff;
-    border-radius: 0.5rem;
-    margin: 1rem;
+    border: 2px solid #00000057;
+    background-color: #72727218;
+    border-radius: 6px;
+    margin: 2rem;
 }
 
 .card-body{
@@ -117,7 +118,7 @@ img.medium{
 }
 
 .price{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 /* rating */
@@ -127,5 +128,7 @@ img.medium{
 }
 
 .rating span:last-child{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
     color: black;
 }
