@@ -12,4 +12,4 @@ Links
 
 images sizes 680 width   830 height
 
-1:37
+1:40
