@@ -1,16 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Rating from '../components/rating';
 import data from '../data'
 
 function item(props) {
     const products = data.products.find(x => x._id === props.match.params.id);
     if (!products) {
-        return 
-        <div>Product not found</div>;
+        return (
+        <div>Product not found</div>
+        )
     }
     return (
         <div>
-            <div className="row">
+            <Link to="/">Results</Link>
+            <div className="row top">
                 <div className="col-2">
                     <img className="large" src={products.image} alt={products.name}></img>
                 </div>
