@@ -10,6 +10,12 @@ body{
     font: 2rem;
     height: 100vh;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  height: 100%;
 }
 
 .grid-container{
@@ -50,6 +56,7 @@ footer{
     grid-area: footer;
     background-color:  rgb(15, 0, 27);
     color: #ffffff;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* common */

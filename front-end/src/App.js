@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" >
-        <title>FreeSpace</title>
-    </head>
+import React from 'react';
 
-
-
-
-<body>
+function App() {
+  return (
     <div class="grid-container">
         <header class="row">
             <div>
@@ -21,14 +13,11 @@
             </div>
         </header>
 
-        <!-- <aside>
-            Shopping
-        </aside> -->
         <main>
             <div class="row center">
                 <div class="card">
                     <a href="#">
-                        <!-- image size needs to be imlplemented  -->
+
                         <img class= "medium" src="./images/product-1.jpg" alt="product" />
                     </a>
                     <div class="card-body">
@@ -49,7 +38,7 @@
                 </div>
                 <div class="card">
                     <a href="#">
-                        <!-- image size needs to be imlplemented  -->
+                     
                         <img class= "medium" src="./images/product-1.jpg" alt="product" />
                     </a>
                     <div class="card-body">
@@ -70,7 +59,7 @@
                 </div>
                 <div class="card">
                     <a href="#">
-                        <!-- image size needs to be imlplemented  -->
+                     
                         <img class= "medium" src="./images/product-1.jpg" alt="product" />
                     </a>
                     <div class="card-body">
@@ -91,7 +80,7 @@
                 </div>
                 <div class="card">
                     <a href="#">
-                        <!-- image size needs to be imlplemented  -->
+                     
                         <img class= "medium" src="./images/product-1.jpg" alt="product" />
                     </a>
                     <div class="card-body">
@@ -112,7 +101,7 @@
                 </div>
                 <div class="card">
                     <a href="#">
-                        <!-- image size needs to be imlplemented  -->
+                     
                         <img class= "medium" src="./images/product-1.jpg" alt="product" />
                     </a>
                     <div class="card-body">
@@ -133,7 +122,6 @@
                 </div>
                 <div class="card">
                     <a href="#">
-                        <!-- image size needs to be imlplemented  -->
                         <img class= "medium" src="./images/product-1.jpg" alt="product" />
                     </a>
                     <div class="card-body">
@@ -157,8 +145,12 @@
         </main>
 
         <footer class="row center">
-            All rights reserved
+            All rights reserved 
+            Created By Daryl Darilag
         </footer>
     </div>
-</body>
-</html>
+
+  );
+}
+
+export default App;
