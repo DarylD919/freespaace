@@ -1,0 +1,23 @@
+{
+  "name": "freespace",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "E-commerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarylD919/freespace.git"
+  },
+  "author": "Daryl Darilag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarylD919/freespace/issues"
+  },
+  "homepage": "https://github.com/DarylD919/freespace#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
