@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import {useDispatch, useSelector} from 'react-redux';
 import { Link } from 'react-router-dom';
+import { detailsProduct } from '../actions/productActions';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 import Rating from '../components/rating';
-import data from '../data'
 
-function item(props) {
-    const products = data.products.find(x => x._id === props.match.params.id);
-    if (!products) {
-        return (
-        <div>Product not found</div>
-        )
-    }
+
+function Item(props) {
+    const dispatch = useDispatch();
+    const productId = props.match.params.id;
+    const productDetails = useSelector((state) => state.productDetails);
+    const {loading, error, products} = productDetails;
+
+    useEffect(() => {
+        dispatch(detailsProduct(productId));
+    }, [dispatch, productId]);
+
     return (
         <div>
+        {loading ? (
+        <LoadingBox></LoadingBox>
+        ) : error ? (
+        <MessageBox variant="danger">{error}</MessageBox>
+        )  :  (
+       <div>
             <Link to="/">Results</Link>
             <div className="row top">
                 <div className="col-2">
@@ -63,7 +76,10 @@ function item(props) {
 
             </div>
         </div>
-    )
+        )}
+    </div>
+        
+    );
 }
 
-export default item
+export default Item
