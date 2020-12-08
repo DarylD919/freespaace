@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/DarylD919/freespace#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
   }
 }
