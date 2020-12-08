@@ -7,6 +7,8 @@ Created the card system for the react app
 
 React router dom installed
 
+axios installed
+
 Links
 
 
