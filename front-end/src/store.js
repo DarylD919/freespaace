@@ -1,13 +1,21 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
+import { basketReducer } from './reducers/basketReducers';
 
 import { productListReducer } from './reducers/productReducers';
 
-const initialState = {};
+const initialState = {
+    basket:{
+        basketItems: localStorage.getItem('basketItems')
+        ? JSON.parse(localStorage.getItem('basketItems'))
+        : [],
+    },
+};
 
 const reducer = combineReducers({
     productList: productListReducer,
-    productDetails: productListReducer
+    productDetails: productListReducer,
+    basket: basketReducer,
 })
 
 const composeEnchancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

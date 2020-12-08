@@ -11,7 +11,10 @@ axios installed
 
 Links
 
+Basket implmented 
+
+
 
 images sizes 680 width   830 height
 
-2:57
+3:36

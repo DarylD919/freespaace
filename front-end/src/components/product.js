@@ -1,18 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Rating from './rating';
 
-function product(props) {
+function Product(props) {
     const { products } = props;
     return (
         <div key={products._id} className="card">
-        <a href={`/product/${products._id}`}>
+        <Link to={`/product/${products._id}`}>
 
             <img className= "medium" src={products.image} alt={products.name} />
-        </a>
+        </Link>
         <div className="card-body">
-        <a href={`/product/${products._id}`}>
+        <Link to={`/product/${products._id}`}>
                 <h2>{products.name}</h2>
-            </a>
+            </Link>
 
             <Rating 
                 rating={products.rating} 
@@ -24,7 +25,7 @@ function product(props) {
             </div>
         </div>
     </div>
-    )
+    );
 }
 
-export default product
+export default Product

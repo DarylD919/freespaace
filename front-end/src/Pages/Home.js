@@ -23,13 +23,13 @@ function Home() {
         <MessageBox variant="danger">{error}</MessageBox>
         )  :  (
         <div className="row center">
-        {products.map((products) => (
-            <Product key={products.id} products={products}></Product>
-        ))}
-          </div>
+            {products.map((products) => (
+                <Product key={products._id} products={products}></Product>
+            ))}
+        </div>
         )}
     </div>
-    )
+    );
 }
 
 export default Home
