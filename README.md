@@ -13,8 +13,12 @@ Links
 
 Basket implmented 
 
+Need to do bug fixing
+
 
 
 images sizes 680 width   830 height
 
-3:36
+PT 16 up to
+
+3:52

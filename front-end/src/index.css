@@ -144,11 +144,19 @@ button.block{
     flex: 2 1 50rem;
 }
 
+.min-30{
+    min-width: 10rem;
+}
+
 /* images  sizes 680*830 */
 
 img{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+}
+img.small{
+    max-width: 5rem;
+    width:100%;
 }
 img.medium{
     max-width: 29rem;
