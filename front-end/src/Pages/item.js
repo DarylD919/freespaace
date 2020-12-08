@@ -49,7 +49,7 @@ function item(props) {
                                         {products.countInStock> 0? (
                                         <span className="Success">In Stock</span>
                                          ):(
-                                        <span className="error">Out of Stock</span>)}
+                                        <span className="danger">Out of Stock</span>)}
                                     </div>
                                 </div>
                             </li>
