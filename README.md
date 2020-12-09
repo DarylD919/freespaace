@@ -19,6 +19,6 @@ debugguging in progress
 
 images sizes 680 width   830 height
 
-PT 16 up to
+pt 18
 
-3:52
+4
