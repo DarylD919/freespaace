@@ -17,7 +17,7 @@ const data = {
     ],
     products:[
         {
-            _id:'1',
+            
             name:'Monitor',
             category:'computer',
             image:'/images/product-1.jpg',
@@ -29,7 +29,7 @@ const data = {
             description: 'Made of pure grade vibranium',
         },
         {
-            _id:'2',
+            
             name:'Monitor Stand',
             category:'computer & tools',
             image:'/images/product-2.jpg',
@@ -41,7 +41,7 @@ const data = {
             description: 'Made of pure grade vibranium',
         },
         {
-            _id:'3',
+            
             name:'Monitor Clamps',
             category:'computer',
             image:'/images/product-3.jpg',
@@ -53,7 +53,7 @@ const data = {
             description: 'Made of pure grade vibranium',
         },
         {
-            _id:'4',
+            
             name:'Monitor Grips',
             category:'computer & tools',
             image:'/images/product-4.jpg',
@@ -65,7 +65,7 @@ const data = {
             description: 'Made of pure grade vibranium',
         },
         {
-            _id:'5',
+            
             name:'Monitor Tools',
             category:'computer',
             image:'/images/product-5.jpg',
@@ -77,7 +77,7 @@ const data = {
             description: 'Made of pure grade vibranium',
         },
         {
-            _id:'6',
+            
             name:'Monitor Brass',
             category:'computer',
             image:'/images/product-6.jpg',
