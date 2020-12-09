@@ -2,7 +2,7 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { basketReducer } from './reducers/basketReducers';
 
-import { productListReducer } from './reducers/productReducers';
+import { productListReducer, productDetailReducer } from './reducers/productReducers';
 
 const initialState = {
     basket:{
@@ -14,7 +14,7 @@ const initialState = {
 
 const reducer = combineReducers({
     productList: productListReducer,
-    productDetails: productListReducer,
+    productDetails: productDetailReducer,
     basket: basketReducer,
 })
 

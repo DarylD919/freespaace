@@ -1,8 +1,8 @@
 import Axios from "axios"
 import { BASKET_ADD_ITEM } from "../constant/basketConstant";
 
-export const addToBasket = (productId, qty) => async(dispatch, getState) =>{
-    const {data} = await Axios.get(`/api/products/${productId}`);
+export const addToBasket = (productId, qty) => async (dispatch, getState) => {
+    const { data } = await Axios.get(`/api/products/${productId}`);
 
     dispatch({
         type: BASKET_ADD_ITEM,

@@ -12,7 +12,7 @@ function Item(props) {
     const productId = props.match.params.id;
     const [qty, setQty] = useState(1);
     const productDetails = useSelector((state) => state.productDetails);
-    const {loading, error, products} = productDetails;
+    const {loading, error, product} = productDetails;
 
     useEffect(() => {
         dispatch(detailsProduct(productId));
@@ -32,22 +32,26 @@ function Item(props) {
             <Link to="/">Results</Link>
             <div className="row top">
                 <div className="col-2">
-                    <img className="large" src={products.image} alt={products.name}></img>
+                    <img 
+                    className="large" 
+                    src={product.image} 
+                    alt={product.name}>
+                    </img>
                 </div>
                 <div className="col-1">
                     <ul>
                         <li>
-                            <h1>{products.name}</h1>
+                            <h1>{product.name}</h1>
                         </li>
                         <li>
-                            <Rating rating={products.rating} numReviews={products.numReviews}/>
+                            <Rating rating={product.rating} numReviews={product.numReviews}/>
                         </li>
                         <li>
-                            Price : £{products.price}
+                            Price : £{product.price}
                         </li>
                         <li>
                             Description
-                            <p>{products.description}</p>
+                            <p>{product.description}</p>
                         </li>
                     </ul>
 
@@ -58,12 +62,14 @@ function Item(props) {
                             <li>
                                 <div className="row">
                                     <div>Price</div>
-                                    <div className="price">£{products.price}</div>
+                                    <div className="price">£{product.price}</div>
                                 </div>
+                                </li>
+                                <li>
                                 <div className="row">
-                                    <div> Status</div>
+                                    <div>Status</div>
                                     <div>
-                                        {products.countInStock> 0? (
+                                        {product.countInStock > 0 ? (
                                         <span className="Success">In Stock</span>
                                          ):(
                                         <span className="danger">Out of Stock</span>)}
@@ -71,16 +77,18 @@ function Item(props) {
                                 </div>
                             </li>
                             {
-                                products.countInStock > 0 && (
+                                product.countInStock > 0 && (
                             <>
                             <li>
                                 <div className="row">
                                     <div>Qty</div>
                                     <div>
-                                        <select value={qty} onChange={e => setQty(e.target.value)}>
+                                        <select 
+                                        value={qty} 
+                                        onChange={(e) => setQty(e.target.value)}>
                                            {/* This shows the amount of stock available to puchase i.e 10 in stock, will show 9 */}
                                             {
-                                                [...Array(products.countInStock).keys()].map ( 
+                                                [...Array(product.countInStock).keys()].map ( 
                                                     (x) => (
                                                     <option key={x + 1} value={x + 1}>{x + 1}</option>
                                                 ) 
@@ -88,23 +96,23 @@ function Item(props) {
                                         </select>
                                     </div>
                                 </div>
-
                             </li>
                                 <li>
-                                    <button onClick={addToBasketHandler} className="primary block">Add to Basket</button>
+                                    <button 
+                                    onClick={addToBasketHandler} 
+                                    className="primary block">Add to Basket
+                                    </button>
                                 </li>
                             </>
-                                )
-                            }
-                        </ul>
-                    </div>
+                        )}
+                    </ul>
                 </div>
             </div>
         </div>
-        )}
     </div>
-        
-    );
+)}
+    </div>
+);
 }
 
 export default Item

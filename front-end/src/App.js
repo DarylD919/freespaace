@@ -6,7 +6,7 @@ import Home from './Pages/Home';
 import Item from './Pages/item';
 
 function App() {
-    const basket = useSelector(state => state.basket);
+    const basket = useSelector((state) => state.basket);
     const { basketItems } = basket;
 
   return (

@@ -9,7 +9,7 @@ export const basketReducer = (state = {basketItems: [] }, action) => {
                 return {
                     ...state,
                     basketItems: state.basketItems.map( (x) => 
-                    x.products === existItem.products? item: x
+                    x.product === existItem.product? item: x
                 ),
             }; 
         } else {

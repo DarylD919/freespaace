@@ -5,31 +5,57 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { listProducts } from '../actions/productActions';
 
-function Home() {
+
+export default function Home() {
     const dispatch = useDispatch();
-    const productList = useSelector( (state) => state.productList);
-    const { loading, error, products} = productList;
-
+    const productList = useSelector((state) => state.productList);
+    const { loading, error, products } = productList;
+  
     useEffect(() => {
-        dispatch(listProducts());
-
+      dispatch(listProducts());
     }, [dispatch]);
-
     return (
-    <div>
+      <div>
         {loading ? (
-        <LoadingBox></LoadingBox>
+          <LoadingBox></LoadingBox>
         ) : error ? (
-        <MessageBox variant="danger">{error}</MessageBox>
-        )  :  (
-        <div className="row center">
-            {products.map((products) => (
-                <Product key={products._id} products={products}></Product>
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <div className="row center">
+            {products.map((product) => (
+              <Product key={product._id} product={product}></Product>
             ))}
-        </div>
+          </div>
         )}
-    </div>
+      </div>
     );
-}
+  }
 
-export default Home
+// function Home() {
+//     const dispatch = useDispatch();
+//     const productList = useSelector((state) => state.productList);
+//     const { loading, error, products} = productList;
+
+//     useEffect(() => {
+//         dispatch(listProducts());
+
+//     }, [dispatch]);
+
+//     return (
+//     <div>
+//         {loading ? (
+//         <LoadingBox></LoadingBox>
+//         ) : error ? (
+//         <MessageBox variant="danger">{error}</MessageBox>
+//         )  :  (
+//         <div className="row center">
+//             {products.map((product) => (
+//                 <Product key={product._id} product={product}></Product>
+//             ))}
+//         </div>
+//         )}
+//     </div>
+//     );
+// }
+
+// export default Home
