@@ -1,4 +1,4 @@
-import { BASKET_ADD_ITEM } from "../constant/basketConstant";
+import { BASKET_ADD_ITEM, BASKET_REMOVE_ITEM } from "../constant/basketConstant";
 
 export const basketReducer = (state = {basketItems: [] }, action) => {
     switch(action.type) {
@@ -15,6 +15,9 @@ export const basketReducer = (state = {basketItems: [] }, action) => {
         } else {
             return { ...state, basketItems: [...state.basketItems, item] };
         }
+        case BASKET_REMOVE_ITEM:
+            return {...state, basketItems: state.basketItems.filter( x => x.product !==action.payload)
+            };
     default:
         return state;
     }

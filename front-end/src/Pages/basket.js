@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addToBasket } from '../actions/basketAction';
+import { addToBasket, removeFromBasket } from '../actions/basketAction';
 import MessageBox from '../components/MessageBox';
 
 function Basket(props) {
@@ -21,6 +21,7 @@ function Basket(props) {
 
     const removeFromBasketHandler = (id) => {
         //delete
+        dispatch(removeFromBasket(id));
     };
 
     const checkoutHandler = () => {
@@ -32,8 +33,7 @@ function Basket(props) {
                 <h1>Basket</h1>
                 {basketItems.length === 0 ? ( 
                 <MessageBox>
-                    Basket is Empty.
-                    <Link to="/">Ready to buy</Link>
+                    Basket is Empty.  <Link to="/">Ready to buy</Link>
                 </MessageBox>
                 ) :( 
                     <ul>
