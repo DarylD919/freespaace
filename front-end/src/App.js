@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Basket from './Pages/basket';
 import Home from './Pages/Home';
 import Item from './Pages/item';
+import Signin from './Pages/Signin';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -29,6 +30,7 @@ function App() {
         <main>
             <Route path="/basket/:id?" component={Basket}></Route> 
             <Route path="/product/:id" component={Item}></Route>
+            <Route path="/signin" component={Signin}></Route>
             <Route path="/" component={Home} exact></Route>
         </main>
 

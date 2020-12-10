@@ -33,7 +33,7 @@ function Basket(props) {
                 <h1>Basket</h1>
                 {basketItems.length === 0 ? ( 
                 <MessageBox>
-                    Basket is Empty.  <Link to="/">Ready to buy</Link>
+                    Basket is Empty.{' '}<Link to="/">Ready to buy</Link>
                 </MessageBox>
                 ) :( 
                     <ul>

@@ -69,10 +69,19 @@ footer{
     font-family: 'Oswald', sans-serif;
 }
 
-/* common */
+/* common  */
 select{
-    font-size: 1.2rem;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 h1{
     font-size: 1.8rem;
@@ -105,10 +114,10 @@ button{
     padding: 1rem;
     border-radius: 5px;
     border: 1px rgba(172, 172, 172, 0.705) solid;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     background-color: rgba(59, 59, 255, 0.712);
     cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 button:hover{
@@ -226,3 +235,39 @@ img.large{
     color: rgba(204, 0, 0, 0.808);
     background-color: rgba(252, 0, 0, 0.274);
 }
+
+/* form */
+.form{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.form label{
+    margin: 1rem 0;
+    display: block;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
