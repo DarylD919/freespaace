@@ -14,6 +14,7 @@ Links
 Basket implmented 
 
 debugguging in progress
+crashes due product.map is not a function in home page
 
 signin backend (front-end in progess)
 
@@ -26,6 +27,6 @@ Simply go to source control and right click and add to .gitnore
 
 images sizes 680 width   830 height
 
-pt 23
+pt 24
 
 5:27

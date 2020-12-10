@@ -6,6 +6,7 @@ import Basket from './Pages/basket';
 import Home from './Pages/Home';
 import Item from './Pages/item';
 import Signin from './Pages/Signin';
+import Register from './Pages/Register';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -47,6 +48,7 @@ function App() {
             <Route path="/basket/:id?" component={Basket}></Route> 
             <Route path="/product/:id" component={Item}></Route>
             <Route path="/signin" component={Signin}></Route>
+            <Route path="/register" component={Register}></Route>
             <Route path="/" component={Home} exact></Route>
         </main>
 
