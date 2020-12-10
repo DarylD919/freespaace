@@ -6,7 +6,7 @@ import MessageBox from '../components/MessageBox';
 import { listProducts } from '../actions/productActions';
 
 
-export default function Home() {
+export default function Home(props) {
     const dispatch = useDispatch();
     const productList = useSelector((state) => state.productList);
     const { loading, error, products } = productList;
