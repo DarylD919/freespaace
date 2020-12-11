@@ -1,4 +1,4 @@
-import { BASKET_ADD_ITEM, BASKET_REMOVE_ITEM, BASKET_SAVE_SHIPPING_ADDRESS } from "../constant/basketConstant";
+import { BASKET_ADD_ITEM, BASKET_REMOVE_ITEM, BASKET_SAVE_PAYMENT_METHOD, BASKET_SAVE_SHIPPING_ADDRESS } from "../constant/basketConstant";
 
 export const basketReducer = (state = {basketItems: [] }, action) => {
     switch(action.type) {
@@ -20,6 +20,8 @@ export const basketReducer = (state = {basketItems: [] }, action) => {
             };
         case BASKET_SAVE_SHIPPING_ADDRESS:
             return {...state, shippingAddress: action.payload};
+        case BASKET_SAVE_PAYMENT_METHOD:
+            return {...state, paymentMethod: action.payload};
     default:
         return state;
     }

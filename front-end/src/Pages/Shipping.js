@@ -22,7 +22,7 @@ function Shipping(props) {
         e.preventDefault();
         dispatch(saveShippingAddress({fullName, address, city, postCode, country})
         );
-        props.history.push('/payement');
+        props.history.push('/payment');
         //action
     }
 

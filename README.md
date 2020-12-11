@@ -27,6 +27,6 @@ Simply go to source control and right click and add to .gitnore
 
 images sizes 680 width   830 height
 
-pt 25
+pt 26
 
-6:03
+6:15
