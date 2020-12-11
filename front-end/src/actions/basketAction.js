@@ -1,5 +1,5 @@
 import Axios from "axios"
-import { BASKET_ADD_ITEM, BASKET_REMOVE_ITEM } from "../constant/basketConstant";
+import { BASKET_ADD_ITEM, BASKET_REMOVE_ITEM, BASKET_SAVE_SHIPPING_ADDRESS } from "../constant/basketConstant";
 
 export const addToBasket = (productId, qty) => async (dispatch, getState) => {
     const { data } = await Axios.get(`/api/products/${productId}`);
@@ -22,4 +22,9 @@ export const addToBasket = (productId, qty) => async (dispatch, getState) => {
 export const removeFromBasket = (productId) => (dispatch, getState) => {
     dispatch({type: BASKET_REMOVE_ITEM, payload: productId});
     localStorage.setItem('basketItems', JSON.stringify(getState().basket.basketItems));
+}
+
+export const saveShippingAddress = (data) => (dispatch) =>{
+    dispatch({type: BASKET_SAVE_SHIPPING_ADDRESS, payload: data});
+    localStorage.setItem('shippingAddress', JSON.stringify(data));
 }

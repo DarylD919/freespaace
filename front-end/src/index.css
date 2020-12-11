@@ -307,3 +307,17 @@ input[type=password] {
   .dropdown:hover .dropdown-content{
     display: block;
   }
+
+  /* checkout */
+.checkout-steps > div{
+    border-top: 0.3rem grey solid;
+    color: grey;
+    flex: 1;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.checkout-steps > div.active{
+    border-top-color: crimson;
+    color: crimson;
+}

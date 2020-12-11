@@ -15,6 +15,9 @@ const initialState = {
         basketItems: localStorage.getItem('basketItems')
         ? JSON.parse(localStorage.getItem('basketItems'))
         : [],
+        shippingAddress: localStorage.getItem('shippingAddress')
+        ? JSON.parse(localStorage.getItem('shippingAddress'))
+        : {}
     },
 };
 
