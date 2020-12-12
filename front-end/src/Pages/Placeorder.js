@@ -1,13 +1,20 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { createOrder } from '../actions/orderActions';
 import CheckoutSteps from '../components/Checkout';
+import { ORDER_CREATE_RESET } from '../constant/orderConstant';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 
 function PlaceOrder(props) {
     const basket = useSelector((state) => state.basket);
     if(!basket.paymentMethod) {
         props.history.push('/payment');
     } 
+
+    const orderCreate = useSelector((state) => state.orderCreate);
+    const {loading, success, error, order} = orderCreate;
 
     const toPrice = (num) => Number(num.toFixed(2));
     basket.itemsPrice = toPrice(
@@ -17,9 +24,16 @@ function PlaceOrder(props) {
     basket.taxPrice = toPrice(0.15 * basket.itemsPrice);
     basket.totalPrice = basket.itemsPrice + basket.shippingPrice + basket.taxPrice;
 
+    const dispatch = useDispatch();
     const placeOrderHandler = () => {
-        // to be completed
+        dispatch(createOrder({...basket, orderItems: basket.basketItems}));
     };
+    useEffect(() => {
+        if(success) {
+            props.history.push(`/order/${order._id}`);
+            dispatch({type: ORDER_CREATE_RESET});
+        }
+    }, [dispatch, order, props.history, success]);
     return (
         <div>
             <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
@@ -110,6 +124,8 @@ function PlaceOrder(props) {
                                     Place Order
                                 </button>
                             </li>
+                            {loading && <LoadingBox></LoadingBox>}
+                            {error && <MessageBox variant="danger">{error}</MessageBox>}
                         </ul>
                     </div>
                 </div>
