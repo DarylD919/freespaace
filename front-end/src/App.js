@@ -10,6 +10,7 @@ import Register from './Pages/Register';
 import Shipping from './Pages/Shipping';
 import Payment from './Pages/Payment';
 import PlaceOrder from './Pages/Placeorder';
+import Order from './Pages/Order';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -55,6 +56,7 @@ function App() {
             <Route path="/shipping" component={Shipping}></Route>
             <Route path="/payment" component={Payment}></Route>
             <Route path="/placeorder" component={PlaceOrder}></Route>
+            <Route path="/order/:id" component={Order}></Route>
             <Route path="/" component={Home} exact></Route>
         </main>
 
