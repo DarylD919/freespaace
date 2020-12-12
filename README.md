@@ -3,6 +3,8 @@ E-commerce
 
 React App FreeSpace created 
 
+
+
 Created the card system for the react app
 
 React router dom installed
@@ -27,6 +29,6 @@ Simply go to source control and right click and add to .gitnore
 
 images sizes 680 width   830 height
 
-pt 26
+pt 28
 
-6:15
+6:51
