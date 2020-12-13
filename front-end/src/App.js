@@ -11,6 +11,7 @@ import Shipping from './Pages/Shipping';
 import Payment from './Pages/Payment';
 import PlaceOrder from './Pages/Placeorder';
 import Order from './Pages/Order';
+import OrderHistory from './Pages/OrderHistory';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -34,7 +35,12 @@ function App() {
                     <div className="dropdown">
                     <Link to="#">{userInfo.name} <i className="fas fa-caret-down"></i></Link>
                     <ul className="dropdown-content">
-                        <Link to="#signout" onClick={signoutHandler}>Signout</Link>
+                        <li>
+                            <Link to="/orderhistory">Order History</Link>
+                        </li>
+                        <li>
+                            <Link to="#signout" onClick={signoutHandler}>Signout</Link>
+                        </li>
                     </ul>
                     </div>
                     ) :(
@@ -57,6 +63,7 @@ function App() {
             <Route path="/payment" component={Payment}></Route>
             <Route path="/placeorder" component={PlaceOrder}></Route>
             <Route path="/order/:id" component={Order}></Route>
+            <Route path="/orderhistory" component={OrderHistory}></Route>
             <Route path="/" component={Home} exact></Route>
         </main>
 
