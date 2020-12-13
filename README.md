@@ -5,20 +5,18 @@ React App FreeSpace created
 
 
 
-Created the card system for the react app
+Created the card system for the react app 
+Paypal 
 
-React router dom installed
-
-axios installed
-
-Links
-
-Basket implmented 
 
 debugguging in progress
 crashes due product.map is not a function in home page
 
-signin backend (front-end in progess)
+Home - completed
+Signin - Completed
+Register - Comjpleted
+Payment - In Progress
+
 
 
 
@@ -29,6 +27,6 @@ Simply go to source control and right click and add to .gitnore
 
 images sizes 680 width   830 height
 
-pt 30
+pt 31
 
-7:28
+7:41

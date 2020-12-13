@@ -18,10 +18,14 @@ mongoose.connect('mongodb://localhost/freespace', {
     useCreateIndex: true,
 })
 
+
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/products', productRouter);
 
+app.get('/api/config/paypal', (req, res) => {
+    res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
+});
 app.get('/', (req, res) => {
     res.send('Server is ready');
 });
