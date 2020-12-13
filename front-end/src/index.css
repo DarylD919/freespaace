@@ -239,6 +239,10 @@ img.large{
     color: rgba(204, 0, 0, 0.808);
     background-color: rgba(252, 0, 0, 0.274);
 }
+.alert-success{
+    color: rgb(0, 204, 0);
+    background-color: rgba(137, 207, 143, 0.274);
+}
 
 /* form */
 .form{

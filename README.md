@@ -15,7 +15,8 @@ crashes due product.map is not a function in home page
 Home - completed
 Signin - Completed
 Register - Comjpleted
-Payment - In Progress
+Payment - Completed
+Order history - in Progress
 
 
 
@@ -27,6 +28,6 @@ Simply go to source control and right click and add to .gitnore
 
 images sizes 680 width   830 height
 
-pt 31
+pt 32
 
-7:41
+8
