@@ -15,6 +15,12 @@ Order history - Completed
 User Profile - In progress
 adding buy and sell features - (/)
 
+Admin Section implement
+Views all products - In Progress
+Views all users - incompelete
+Views all Orders - incompelete
+Dashboard - incompelete
+
 Design Change index.css
 
 
@@ -26,6 +32,3 @@ Simply go to source control and right click and add to .gitnore
 images sizes:
 680 width 830 height
 
-pt 34
-
-8:38

@@ -12,7 +12,8 @@ import Payment from './Pages/Payment';
 import PlaceOrder from './Pages/Placeorder';
 import Order from './Pages/Order';
 import OrderHistory from './Pages/OrderHistory';
-import Profile from './Pages/Profile';
+import ProfilePage from './Pages/ProfilePage';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -50,6 +51,25 @@ function App() {
                     ) :(
                          <Link to="/signin">Sign In</Link>
                 )}
+                {userInfo && userInfo.isAdmin && (
+                    <div className= "dropdown">
+                        <Link to="#admin">Admin {' '}<i className="fas fa-caret-down"></i></Link>
+                        <ul className="dropdown-content">
+                            <li>
+                                <Link to="/dashboard">Dashboard</Link>
+                            </li>
+                            <li>
+                                <Link to="/productlist">Product</Link>
+                            </li>
+                            <li>
+                                <Link to="/orderlist">Orders</Link>
+                            </li>
+                            <li>
+                                <Link to="/userlist">Users</Link>
+                            </li>
+                        </ul>
+                    </div>
+                )}
                 <Link to="/basket">Basket
                 {basketItems.length > 0 && (
                     <span className="badge">{basketItems.length}</span>
@@ -68,7 +88,7 @@ function App() {
             <Route path="/placeorder" component={PlaceOrder}></Route>
             <Route path="/order/:id" component={Order}></Route>
             <Route path="/orderhistory" component={OrderHistory}></Route>
-            <Route path="/profile" component={Profile}></Route>
+            <PrivateRoute path="/profile" component={ProfilePage}></PrivateRoute>
             <Route path="/" component={Home} exact></Route>
         </main>
 
