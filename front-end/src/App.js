@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { signout } from './actions/userActions';
+import AdminRoute from './components/AdminRoute';
 import Basket from './Pages/basket';
 import Home from './Pages/Home';
 import Item from './Pages/item';
@@ -14,6 +15,7 @@ import Order from './Pages/Order';
 import OrderHistory from './Pages/OrderHistory';
 import ProfilePage from './Pages/ProfilePage';
 import PrivateRoute from './components/PrivateRoute';
+import ProductList from './Pages/ProductList';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -80,7 +82,7 @@ function App() {
 
         <main>
             <Route path="/basket/:id?" component={Basket}></Route> 
-            <Route path="/product/:id" component={Item}></Route>
+            <Route path="/product/:id" component={Item} exact></Route>
             <Route path="/signin" component={Signin}></Route>
             <Route path="/register" component={Register}></Route>
             <Route path="/shipping" component={Shipping}></Route>
@@ -89,6 +91,7 @@ function App() {
             <Route path="/order/:id" component={Order}></Route>
             <Route path="/orderhistory" component={OrderHistory}></Route>
             <PrivateRoute path="/profile" component={ProfilePage}></PrivateRoute>
+            <AdminRoute path="/productlist" component={ProductList}></AdminRoute>
             <Route path="/" component={Home} exact></Route>
         </main>
 

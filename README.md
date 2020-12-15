@@ -13,13 +13,20 @@ Payment - Completed
 Order history - Completed
 
 User Profile - In progress
-adding buy and sell features - (/)
+adding buy and sell products - 
+(   
+    create product = In progress
+)
 
 Admin Section implement
-Views all products - In Progress
-Views all users - incompelete
-Views all Orders - incompelete
-Dashboard - incompelete
+Views all products - In Progress ADMIN ONLY
+Need to implement Edit/Delete funciton
+
+
+
+Views all users - incompelete  ADMIN ONLY
+Views all Orders - incompelete  ADMIN ONLY
+Dashboard - incompelete  ADMIN ONLY
 
 Design Change index.css
 
@@ -32,3 +39,4 @@ Simply go to source control and right click and add to .gitnore
 images sizes:
 680 width 830 height
 
+pt 38
