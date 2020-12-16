@@ -5,6 +5,7 @@ React App FreeSpace created
 
 debugguging in progress
 crashes due product.map is not a function in home page
+crashes due product.map is not a function in productList page
 
 Home - completed
 Signin - Completed
@@ -23,7 +24,8 @@ Views all products - In Progress ADMIN ONLY
 Need to implement Edit/Delete funciton
 
 edit - In Progress
-Update in progress
+Update - In progress
+Delete - In Progress
 
 ------------------------------------------------------------------
 
@@ -42,4 +44,4 @@ Simply go to source control and right click and add to .gitnore
 images sizes:
 680 width 830 height
 
-pt 40
+pt 41
