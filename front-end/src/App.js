@@ -17,6 +17,7 @@ import ProfilePage from './Pages/ProfilePage';
 import PrivateRoute from './components/PrivateRoute';
 import ProductList from './Pages/ProductList';
 import ProductEdit from './Pages/ProductEdit';
+import OrderList from './Pages/OrderList';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -94,6 +95,7 @@ function App() {
             <Route path="/orderhistory" component={OrderHistory}></Route>
             <PrivateRoute path="/profile" component={ProfilePage}></PrivateRoute>
             <AdminRoute path="/productlist" component={ProductList}></AdminRoute>
+            <AdminRoute path="/orderlist" component={OrderList}></AdminRoute>
             <Route path="/" component={Home} exact></Route>
         </main>
 
