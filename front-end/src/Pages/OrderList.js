@@ -57,7 +57,12 @@ function OrderList(props) {
                                 <td>{order.createdAt.substring(0, 10)}</td>
                                 <td>{order.totalPrice.toFixed(2)}</td>
                                 <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td>
-                                <td>{order.isDelivered ? order.deliveredAt.substring(0, 10) : 'No'}</td>
+                                <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td>
+                                {/* <td>
+                                    {order.isDelivered 
+                                    ? order.deliveredAt.substring(0, 10) 
+                                    : 'No'}
+                                </td> */}
                                 <td>
                                     <button type="button" className="small"
                                         onClick={() => {props.history.push(`/order/${order._id}`)}}>Details</button>

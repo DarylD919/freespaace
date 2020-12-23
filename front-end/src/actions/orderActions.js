@@ -55,7 +55,6 @@ export const detailsOrder = (orderId) => async (dispatch, getState) => {
             headers: { Authorization: `Bearer ${userInfo.token}`}
         })
         dispatch({type: ORDER_DETAILS_SUCCESS, payload: data});
-
     }catch (error) {
         const message =  
         error.response && error.response.data.message

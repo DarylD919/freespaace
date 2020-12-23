@@ -89,7 +89,8 @@ function Order(props) {
                                     {order.shippingAddress.postCode},<br />
                                     {order.shippingAddress.country}
                                 </p>
-                                {order.isDelivered? (<MessageBox variant="success">Delivered at {order.deliveredAt}</MessageBox>
+                                {order.isDelivered ? 
+                                (<MessageBox variant="success">Delivered at {order.deliveredAt}</MessageBox>
                                 ) : (
                                 <MessageBox variant="danger">Not Delivered</MessageBox>
                                 )}

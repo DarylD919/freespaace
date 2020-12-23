@@ -6,6 +6,7 @@ React App FreeSpace created
 debugguging in progress
 crashes due product.map is not a function in home page
 crashes due product.map is not a function in productList page
+orderlist screen delieveredAt having issues
 
 Home - completed
 Signin - Completed
@@ -15,23 +16,22 @@ Order history - Completed
 
 User Profile - In progress
 adding buy and sell products - 
-(   
-    create product = In progress
-)
 
 Admin Section implement
 Views all products - In Progress ADMIN ONLY
 Need to implement Edit/Delete funciton
 
-edit - In Progress
-Update - In progress
-Delete - In Progress
+edit products - Complete
+Delete products - complete
 
 ------------------------------------------------------------------
 
-Views all users - incompelete  ADMIN ONLY
-Views all Orders - incompelete  ADMIN ONLY
+Views all users - incomplete  ADMIN ONLY
+Views all Orders - complete  ADMIN ONLY
 Dashboard - incompelete  ADMIN ONLY
+
+Admin -
+ Delete users - inprogress
 
 Design Change index.css
 
@@ -44,4 +44,4 @@ Simply go to source control and right click and add to .gitnore
 images sizes:
 680 width 830 height
 
-pt 46
+pt 47
