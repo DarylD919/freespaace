@@ -32,6 +32,7 @@ Dashboard - incompelete  ADMIN ONLY
 
 Admin -
  Delete users - complete ADMIN only (can't delete admin)
+ Edit Users - complete ADMIN only 
 
 Design Change index.css
 
@@ -44,4 +45,4 @@ Simply go to source control and right click and add to .gitnore
 images sizes:
 680 width 830 height
 
-pt 48
+pt 49

@@ -20,6 +20,9 @@ import
     USER_DELETE_REQUEST,
     USER_DELETE_SUCCESS,
     USER_DELETE_FAIL,
+    USER_UPDATE_REQUEST,
+    USER_UPDATE_SUCCESS,
+    USER_UPDATE_FAIL,
 } 
 from "../constant/userConstant"
 
@@ -64,7 +67,7 @@ export const signout = () => (dispatch) => {
     localStorage.removeItem('basketItems');
     localStorage.removeItem('shippingAddress');
     dispatch({type: USER_SIGNOUT});
-    document.location.location.href = '/signin';
+    document.location.href = '/signin';
 };
 
 
@@ -151,5 +154,23 @@ export const deleteUser = (userId) => async (dispatch, getState) => {
         ? error.response.data.message
         : error.message;
         dispatch({ type: USER_DELETE_FAIL, payload: message });
+    }
+};
+
+export const updateUser = (user) => async (dispatch, getState) => {
+    dispatch({ type: USER_UPDATE_REQUEST, payload: user });
+    const {userSignin: {userInfo},
+            } = getState();
+    try {
+        const { data } = await Axios.put(`/api/users/${user._id}`, user, {
+            headers: { Authorization: `Bearer ${userInfo.token}` }
+        });
+        dispatch({type: USER_UPDATE_SUCCESS, payload: data });
+    } catch (error) {
+        const message =
+        error.response && error.response.data.message 
+        ? error.response.data.message
+        : error.message;
+        dispatch({ type: USER_UPDATE_FAIL, payload: message });
     }
 };

@@ -19,6 +19,7 @@ import ProductList from './Pages/ProductList';
 import ProductEdit from './Pages/ProductEdit';
 import OrderList from './Pages/OrderList';
 import UserList from './Pages/UserList';
+import UserEdit from './Pages/UserEdit';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -98,6 +99,7 @@ function App() {
             <AdminRoute path="/productlist" component={ProductList}></AdminRoute>
             <AdminRoute path="/orderlist" component={OrderList}></AdminRoute>
             <AdminRoute path="/userlist" component={UserList}></AdminRoute>
+            <AdminRoute path="/user/:id/edit" component={UserEdit}></AdminRoute>
             <Route path="/" component={Home} exact></Route>
         </main>
 
