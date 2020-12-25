@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { signout } from './actions/userActions';
 import AdminRoute from './components/AdminRoute';
+import SellerRoute from './components/SellerRoute';
 import Basket from './Pages/basket';
 import Home from './Pages/Home';
 import Item from './Pages/item';
@@ -20,6 +21,7 @@ import ProductEdit from './Pages/ProductEdit';
 import OrderList from './Pages/OrderList';
 import UserList from './Pages/UserList';
 import UserEdit from './Pages/UserEdit';
+import SellerPage from './Pages/SellerPage';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -57,6 +59,21 @@ function App() {
                     ) :(
                          <Link to="/signin">Sign In</Link>
                 )}
+                {userInfo && userInfo.isSeller && (
+                    <div className="dropdown">
+                        <Link to="#admin">
+                            Seller <i className="fas fa-caret-down"></i>
+                        </Link>
+                        <ul className="dropdown-content">
+                            <li>
+                                <Link to="/productlist/seller">Products</Link>
+                            </li>
+                            <li>
+                                <Link to="/orderlist/seller">Orders</Link>
+                            </li>
+                        </ul>
+                    </div>
+                )}
                 {userInfo && userInfo.isAdmin && (
                     <div className= "dropdown">
                         <Link to="#admin">Admin {' '}<i className="fas fa-caret-down"></i></Link>
@@ -85,7 +102,8 @@ function App() {
         </header>
 
         <main>
-            <Route path="/basket/:id?" component={Basket}></Route> 
+            <Route path="/basket/:id?" component={Basket}></Route>
+            <Route path="/seller/:id?" component={SellerPage}></Route>
             <Route path="/product/:id" component={Item} exact></Route>
             <Route path="/product/:id/edit" component={ProductEdit} exact></Route>
             <Route path="/signin" component={Signin}></Route>
@@ -100,6 +118,8 @@ function App() {
             <AdminRoute path="/orderlist" component={OrderList}></AdminRoute>
             <AdminRoute path="/userlist" component={UserList}></AdminRoute>
             <AdminRoute path="/user/:id/edit" component={UserEdit}></AdminRoute>
+            <SellerRoute path="/productlist/seller" component={ProductList}></SellerRoute>
+            <SellerRoute path="orderlist/seller" component={OrderList}></SellerRoute>
             <Route path="/" component={Home} exact></Route>
         </main>
 

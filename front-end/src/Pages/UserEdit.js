@@ -13,7 +13,7 @@ function UserEdit(props) {
     const [isAdmin, setIsAdmin] = useState(false);
     
     const userDetails = useSelector((state) => state.userDetails);
-    const { loading, error, user } =userDetails;
+    const { loading, error, user } = userDetails;
 
     const userUpdate = useSelector((state) => state.userUpdate);
     const 

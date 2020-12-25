@@ -7,6 +7,7 @@ import { PRODUCT_CREATE_RESET, PRODUCT_DELETE_RESET } from '../constant/productC
 
 
 function ProductList(props) {
+    const sellerMode = props.match.path.indexOf('/seller') >= 0; 
     const productList = useSelector((state) => state.productList);
     const { loading, error, products } = productList;
 
@@ -27,6 +28,9 @@ function ProductList(props) {
         success: successDelete, 
     } = productDelete;
 
+    const userSignin = useSelector((state) => state.userSignin);
+    const { userInfo } = userSignin;
+
     const dispatch = useDispatch();
     useEffect(() => {
         if (succesCreate) {
@@ -36,8 +40,8 @@ function ProductList(props) {
         if (successDelete) {
             dispatch({ type: PRODUCT_DELETE_RESET });
         }
-        dispatch(listProducts());
-    }, [dispatch, createdProduct, props.history, succesCreate, successDelete]);
+        dispatch(listProducts({ seller: sellerMode ? userInfo._id : ''}));
+    }, [dispatch, createdProduct, props.history, sellerMode, succesCreate, successDelete, userInfo._id]);
 
     const deleteHandler = (product) => {
         if (window.confirm('Confirm Delete?')) {
