@@ -86,4 +86,18 @@ userRouter.get('/', isAuth, isAdmin, expressAsyncHandler(async (req, res) =>{
     res.send(users);
 }));
 
+userRouter.delete('/:id', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+        if (user.email === 'admin@example.com') {
+            res.status(400).send({ message: 'Admin can not be deleted'});
+            return;
+        }
+        const deleteUser = await user.remove();
+        res.send({ message: 'User deleted', user: deleteUser});
+    } else {
+        res.status(404).send({ message: 'User not found'});
+    }
+}));
+
 export default userRouter;

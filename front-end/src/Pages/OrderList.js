@@ -34,6 +34,9 @@ function OrderList(props) {
             <h1>Orders</h1>
             {loadingDelete && <LoadingBox></LoadingBox>}
             {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
+            {successDelete && (
+                <MessageBox variant="success">Product has been deleted</MessageBox>
+            )}
             {loading? (<LoadingBox></LoadingBox> 
             ) : error? ( <MessageBox variant="danger">{error}</MessageBox>
             ) : (

@@ -26,12 +26,12 @@ Delete products - complete
 
 ------------------------------------------------------------------
 
-Views all users - incomplete  ADMIN ONLY
+Views all users - complete  ADMIN ONLY
 Views all Orders - complete  ADMIN ONLY
 Dashboard - incompelete  ADMIN ONLY
 
 Admin -
- Delete users - inprogress
+ Delete users - complete ADMIN only (can't delete admin)
 
 Design Change index.css
 
@@ -44,4 +44,4 @@ Simply go to source control and right click and add to .gitnore
 images sizes:
 680 width 830 height
 
-pt 47
+pt 48
