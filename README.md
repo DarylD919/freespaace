@@ -18,7 +18,7 @@ User Profile - In progress
 adding buy and sell products - 
 
 Admin Section implement
-Views all products - In Progress ADMIN ONLY
+Views all products - complete ADMIN ONLY
 Need to implement Edit/Delete funciton
 
 edit products - Complete

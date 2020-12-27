@@ -63,7 +63,7 @@ function OrderList(props) {
                                 <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td>
                                 {/* <td>
                                     {order.isDelivered 
-                                    ? order.deliveredAt.substring(0, 10) 
+                                    ? order.delivered.substring(0, 10) 
                                     : 'No'}
                                 </td> */}
                                 <td>
