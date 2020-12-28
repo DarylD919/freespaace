@@ -6,7 +6,7 @@ React App FreeSpace created
 debugguging in progress
 crashes due product.map is not a function in home page
 crashes due product.map is not a function in productList page
-orderlist screen delieveredAt having issues
+
 
 Home - completed
 Signin - Completed
@@ -14,7 +14,7 @@ Register - Completed
 Payment - Completed
 Order history - Completed
 
-User Profile - In progress
+User Profile - Completed
 adding buy and sell products - 
 
 Admin Section implement
@@ -28,7 +28,6 @@ Delete products - complete
 
 Views all users - complete  ADMIN ONLY
 Views all Orders - complete  ADMIN ONLY
-Dashboard - incompelete  ADMIN ONLY
 
 Admin -
  Delete users - complete ADMIN only (can't delete admin)
