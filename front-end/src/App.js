@@ -20,6 +20,7 @@ import ProductEdit from './Pages/ProductEdit';
 import OrderList from './Pages/OrderList';
 import UserList from './Pages/UserList';
 import UserEdit from './Pages/UserEdit';
+import ProductCreate from './Pages/ProductCreate';
 
 function App() {
     const basket = useSelector((state) => state.basket);
@@ -88,6 +89,7 @@ function App() {
             <Route path="/basket/:id?" component={Basket}></Route> 
             <Route path="/product/:id" component={Item} exact></Route>
             <Route path="/product/:id/edit" component={ProductEdit} exact></Route>
+            <Route path="/product/:id/create" component={ProductCreate} exact></Route>
             <Route path="/signin" component={Signin}></Route>
             <Route path="/register" component={Register}></Route>
             <Route path="/shipping" component={Shipping}></Route>

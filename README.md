@@ -21,6 +21,7 @@ Admin Section implement
 Views all products - complete ADMIN ONLY
 Need to implement Edit/Delete funciton
 
+create products - complete
 edit products - Complete
 Delete products - complete
 
@@ -32,6 +33,7 @@ Views all Orders - complete  ADMIN ONLY
 Admin -
  Delete users - complete ADMIN only (can't delete admin)
  Edit Users - complete ADMIN only 
+
 
 Design Change index.css
 

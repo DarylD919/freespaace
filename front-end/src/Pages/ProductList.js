@@ -31,7 +31,7 @@ function ProductList(props) {
     useEffect(() => {
         if (succesCreate) {
             dispatch({ type: PRODUCT_CREATE_RESET });
-            props.history.push(`/product/${createdProduct._id}/edit`);
+            props.history.push(`/product/${createdProduct._id}/create`);
         }
         if (successDelete) {
             dispatch({ type: PRODUCT_DELETE_RESET });
